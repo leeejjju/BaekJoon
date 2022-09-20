@@ -2,7 +2,6 @@
 #include <string.h>
 //백준 11098
 //첼시를 도와줘!
-
 /*
 테스트 케이스의 개수 n이 주어진다 (n≤100)
 p는 고려해야될 선수의 수이다 (1≤p≤100)
@@ -14,13 +13,15 @@ p는 고려해야될 선수의 수이다 (1≤p≤100)
 int n, p, c;
 
 struct player {
+
+
   int price;
   char name[21];
+
+
 };
 
 int main(void) {
-
-  //printf("[lets getting start!]\n");
 
   char names[101][21]; //최고가 선수의 이름을 저장할 배열
   scanf("%d", &n);
@@ -47,12 +48,10 @@ int main(void) {
       }
 
     }
-
     //최종적으로 저장된 max인덱스의 name을 배열에 저장
     strcpy(names[i], players[maxIndex].name);
 
   }
-
   //결과값 출력
   for (int i = 0; i < n; i++) {
     printf("%s\n", names[i]);
