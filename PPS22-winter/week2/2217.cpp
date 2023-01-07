@@ -3,7 +3,7 @@
 #include <algorithm>
 #include <utility>
 using namespace std;
-//2217
+//2217 A125 로프
 /*
 N(1 ≤ N ≤ 100,000)개의 로프. 병렬로 연결하면 각각의 로프에 걸리는 중량을 나눌 수 있다
 k개의 로프로 중량 w인 물체를 들어올릴 때, 각각의로프에는 w/k 만큼의 중량이 걸리게 된다.
@@ -12,6 +12,8 @@ k개의 로프로 중량 w인 물체를 들어올릴 때, 각각의로프에는 
 */
 int n;
 vector<int> rope;
+bool func(int a, int b){return a > b;}
+
 
 int main(void){
     ios::sync_with_stdio(0);
@@ -23,8 +25,15 @@ int main(void){
         cin >> a;
         rope.push_back(a);
     }
+
+    sort(rope.begin(), rope.end(), func);
     
-    //for(int i = 0; i< n; i++) cout << rope.at(i) << endl;
+    int MAX = 0;
+    for(int i = 0; i< n; i++){
+        MAX = max(MAX, rope.at(i)*(i+1));
+    }
+
+    cout << MAX;
     
 
 }
