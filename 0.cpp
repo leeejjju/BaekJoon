@@ -7,7 +7,7 @@
 using namespace std;
 //
 /*
-
+ 
 */
 int n;
 vector<int> vec;
