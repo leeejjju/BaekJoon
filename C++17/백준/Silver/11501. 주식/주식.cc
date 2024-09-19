@@ -8,7 +8,7 @@ using namespace std;
 //11501
 
 int T, N, sellPrice;
-long long maxReturn;
+uint64_t maxReturn;
 vector<int> stock;
 
 int main(void){
